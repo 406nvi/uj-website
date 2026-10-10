@@ -1,0 +1,400 @@
+/* What is UJ? */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: visible;
+}
+
+.what-is-UJ-section {
+    background-color: #255F38;
+    display: flex;
+    height: calc(100vh - 81px);
+    width: 100%;
+}
+
+.UJ-squiggly-divider svg {
+    height: calc(100% + 1px);
+    width: 10vw;
+    display: block;
+    position: absolute;
+    left: calc(45% - 5px);
+    transform: rotateY(180deg);
+}
+
+.UJ-content-left {
+    color: white;
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    background: url("../../assets/jade-green-watercolor.jpg") no-repeat center center;
+    background-size: cover;
+    max-height: none;
+}
+
+.UJ-info {
+    text-align: center;
+    margin: 0 10% -5vh 0;
+    width: 75%;
+
+    h1 {
+        font-family: "TS Block Bold", serif;
+        font-size: 2.5rem;
+        text-shadow: 0 0 3px white;
+        padding-top: 50px;
+    }
+
+    p {
+        font-family: "Rubik", serif;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        text-shadow: 0 0 2px white;
+    }
+}
+
+/* Founder info */
+.UJ-content-right {
+    width: 45%;
+    padding: 2rem;
+    max-height: none;
+    background-color: #e8e5dc;
+
+    h1 {
+        display: none;
+    }
+
+    .founder-card {
+        display: inline-block;
+        padding: 10px;
+        text-align: center;
+
+        img {
+            display: block;
+            width: 200px;
+            height: auto;
+            margin-bottom: 8px;
+            position: absolute;
+            object-fit: cover;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+    }
+
+    .founder-a {
+        top: 5%;
+        right: 16%;
+        rotate: -3deg;
+        transition: all 0.5s ease;
+    }
+
+    .founder-b {
+        bottom: 12%;
+        right: 3%;
+        rotate: 7deg;
+        transition: all 0.5s ease;
+    }
+
+    .founder-c {
+        bottom: 10%;
+        right: 28%;
+        rotate: -5deg;
+        transition: all 0.5s ease;
+    }
+
+    @media (hover: hover) {
+        .founder-a:hover {
+            rotate: 0deg;
+            transition: all 0.5s ease;
+        }
+
+        .founder-b:hover {
+            rotate: 0deg;
+            transition: all 0.5s ease;
+        }
+
+        .founder-c:hover {
+            rotate: 0deg;
+            transition: all 0.5s ease;
+        }
+    }
+
+    @media (orientation: portrait) {
+        .founder-a {
+            top: 5%;
+            right: 17%;
+        }
+
+        .founder-b {
+            bottom: 40%;
+            right: 15%;
+        }
+
+        .founder-c {
+            bottom: 10%;
+            right: 16%;
+        }
+    }
+}
+
+.UJ-content-right hr {
+    opacity: 0;
+}
+
+.our-values {
+    height: auto;
+    background-color: #e8e5dc;
+    padding: 40px 100px;
+    font-family: "Rubik", serif;
+    margin: -1px;
+
+    h2 {
+        font-family: "TS Block Bold", serif;
+        font-size: 40px;
+        padding-bottom: 24px;
+        font-weight: normal;
+    }
+
+    h4 {
+        font-family: "Alegreya Sans SC", serif;
+        color: #2F5249;
+    }
+
+    ul {
+        font-size: 16px;
+        font-weight: normal;
+        list-style: none;
+        line-height: 24px;
+        margin-left: -40px;
+    }
+
+    li {
+        padding-bottom: 16px;
+    }
+
+    li:before {
+        content: "+";
+        margin-right: 4px;
+    }
+}
+
+.values-box {
+    background: #e9dacf;
+    padding: 10px 60px;
+    border-radius: 10px;
+}
+
+.values-container {
+    display: flex;
+    gap: 100px;
+}
+
+@media (orientation: portrait) {
+    .our-values {
+        padding: 40px 80px;
+    }
+
+    .values-container {
+        display: block;
+    }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    html, body {
+        height: 100%;
+        overflow-y: visible;
+    }
+
+    .what-is-UJ-section {
+        flex-direction: column;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .UJ-content-left {
+        width: 100%;
+        height: 80dvh;
+        padding: 1.5rem;
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .UJ-info {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        max-width: none;
+        padding: 0 5px;
+
+        h1 {
+            text-shadow: 0 0 2px white;
+        }
+
+        p {
+            font-size: 1rem;
+            text-shadow: 0 0 1px white;
+        }
+    }
+
+    .UJ-content-right {
+        width: 100%;
+        max-height: 100%;
+        height: auto;
+        margin-top: 0;
+
+        .founder-card {
+            img {
+                position: static;
+                width: 150px;
+                margin: 0 auto;
+            }
+        }
+
+        .founders {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        h1 {
+            font-family: "Alegreya Sans SC", serif;
+            font-size: 32px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .UJ-squiggly-divider {
+        display: none;
+    }
+
+    .UJ-content-right hr {
+        opacity: 1;
+        overflow: visible;
+        padding: 0;
+        border: none;
+        border-top: medium double #333;
+        color: #333;
+        text-align: center;
+    }
+
+    .UJ-content-right hr:after {
+        content: "𖡼";
+        display: inline-block;
+        position: relative;
+        top: -0.7em;
+        font-size: 1.5em;
+        padding: 0 0.25em;
+        background: #e8e5dc;
+    }
+
+    .our-values {
+        padding: 40px;
+
+        h2 {
+            font-size: 32px;
+            text-align: center;
+        }
+    }
+
+    .values-container {
+        display: block;
+    }
+
+    .values-box {
+        padding: 10px 30px;
+    }
+}
+
+/* Modal for founder info */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.modal-content {
+    padding: 2rem;
+    max-width: 600px;
+    max-height: 60dvh;
+    width: 100%;
+    color: #1a1a1a;
+    position: relative;
+    text-align: center;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    overflow-y: auto;
+    background: rgba(233, 218, 207, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    h3 {
+        font-family: "Alegreya Sans SC", serif;
+        font-size: 24px;
+    }
+
+    p {
+        font-family: 'Public Sans', sans-serif;
+    }
+}
+
+#abbyModal .modal-content {
+    background-position: top;
+}
+
+#kai-linModal .modal-content {
+    background-position: center;
+}
+
+#jannelModal .modal-content {
+    background-position: bottom;
+}
+
+.modal.show .modal-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.close {
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Modal for small screens */
+@media (max-width: 768px) {
+    .modal {
+        padding: 0;
+    }
+
+    .modal-content {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        max-height: 100dvh;
+        height: 100dvh;
+        overflow-y: auto;
+        width: 100%;
+        border-radius: 1rem;
+    }
+}

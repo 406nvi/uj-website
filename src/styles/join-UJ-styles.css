@@ -1,0 +1,368 @@
+html, body {
+    overflow-y: visible;
+}
+
+.join-UJ-section {
+    display: flex;
+    background: url("../../assets/close-up-wet-leaves.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100dvh;
+    max-height: calc(100dvh - 81px);
+}
+
+.join-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+
+    h1 {
+        color: white;
+        font-family: "TS Block Bold", serif;
+        font-size: 3vw;
+        margin: 0 340px;
+        text-shadow: 0 0 3px white;
+    }
+
+    p {
+        color: white;
+        font-family: "Rubik", sans-serif;
+        font-size: 1.25vw;
+        margin: 0 340px;
+        text-shadow: 0 0 3px white;
+    }
+
+    ul {
+        font-family: "Rubik", serif;
+        color: white;
+        text-shadow: 0 0 2px white;
+        font-size: 0.75vw;
+        font-weight: normal;
+        list-style: none;
+        margin: -32px 350px 0 320px;
+        text-align: start;
+    }
+
+    li:before {
+        content: "+";
+        margin-right: 4px;
+    }
+}
+
+.join-us-button {
+    font-family: "Rubik", serif;
+    font-size: 1.3vw;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    border: white solid 2px;
+    border-radius: 10px;
+    color: #1c3623;
+    background-color: white;
+}
+
+@media (hover: hover) {
+    .join-us-button:hover {
+        cursor: pointer;
+    }
+
+    .zoom-out {
+        transition: 0.5s;
+    }
+
+    .zoom-out:hover {
+        transform: scale(1.05);
+    }
+}
+
+.join-left {
+    width: 20%;
+}
+
+.join-right {
+    width: 20%;
+}
+
+.join-left,
+.join-right {
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+
+    img {
+        display: block;
+        width: 200px;
+        height: auto;
+        margin-bottom: 8px;
+        position: absolute;
+        object-fit: cover;
+    }
+
+    /* Images on sides */
+
+    .image-container-tea {
+        position: absolute;
+        border: 2px solid white;
+        display: inline-block;
+        vertical-align: top;
+        top: 20%;
+        left: 3%;
+        z-index: -1;
+        border-radius: 5px;
+    }
+
+    .tea-image {
+        height: 200px;
+        width: auto;
+        position: relative;
+        left: 30px;
+        top: 30px;
+        border-radius: 5px;
+    }
+
+    .image-container-pumpkin {
+        position: absolute;
+        border: 2px solid white;
+        display: inline-block;
+        vertical-align: top;
+        top: 37%;
+        left: 21%;
+        z-index: -1;
+        border-radius: 5px;
+    }
+
+    .pumpkin-image {
+        height: 200px;
+        width: auto;
+        position: relative;
+        right: 30px;
+        bottom: 30px;
+        border-radius: 5px;
+    }
+
+    .image-container-dragon {
+        position: absolute;
+        border: 2px solid white;
+        display: inline-block;
+        vertical-align: top;
+        top: 67%;
+        left: 5%;
+        z-index: -1;
+        border-radius: 5px;
+    }
+
+    .dragon-image {
+        height: 100px;
+        width: auto;
+        position: relative;
+        left: 30px;
+        bottom: 30px;
+        border-radius: 5px;
+    }
+
+    .image-container-milk-tea {
+        position: absolute;
+        border: 2px solid white;
+        display: inline-block;
+        vertical-align: top;
+        top: 52%;
+        right: 3%;
+        z-index: -1;
+        border-radius: 5px;
+    }
+
+    .milk-tea-image {
+        height: 125px;
+        width: auto;
+        position: relative;
+        right: 30px;
+        bottom: 30px;
+        border-radius: 5px;
+    }
+
+    .image-container-swing {
+        position: absolute;
+        border: 2px solid white;
+        display: inline-block;
+        vertical-align: top;
+        top: 57%;
+        right: 21%;
+        z-index: -1;
+        border-radius: 5px;
+    }
+
+    .swing-image {
+        height: 200px;
+        width: auto;
+        position: relative;
+        left: 30px;
+        bottom: 30px;
+        border-radius: 5px;
+    }
+
+    .image-container-group {
+        position: absolute;
+        border: 2px solid white;
+        display: inline-block;
+        vertical-align: top;
+        top: 12%;
+        right: 10%;
+        z-index: -1;
+        border-radius: 5px;
+    }
+
+    .group-image {
+        height: 150px;
+        width: auto;
+        position: relative;
+        right: 30px;
+        top: 30px;
+        border-radius: 5px;
+    }
+}
+
+@media (orientation: portrait) {
+    .join-us {
+        justify-content: flex-start;
+        padding-top: 100px;
+        gap: 32px;
+
+        h1 {
+            font-size: 4vh;
+            margin: 0 32px;
+            text-shadow: 0 0 2px white;
+        }
+
+        p {
+            font-size: 2vh;
+            text-shadow: 0 0 1px white;
+            margin: 0 36px;
+        }
+
+        .join-us-button {
+            font-size: 1.5vh;
+        }
+
+        ul {
+            margin: 0 -50px;
+            font-size: 10px;
+        }
+    }
+
+    .join-right,
+    .join-left {
+        .image-container-dragon,
+        .image-container-swing,
+        .image-container-group {
+            display: none;
+        }
+
+        .image-container-tea {
+            top: 57%;
+            left: 5%;
+        }
+
+        .tea-image {
+            height: 25vh;
+            width: auto;
+            top: 20px;
+            left: 20px;
+        }
+
+        .image-container-pumpkin {
+            top: 77%;
+            left: 50%;
+        }
+
+        .pumpkin-image {
+            height: 18vh;
+            width: auto;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .image-container-milk-tea {
+            top: 55%;
+            right: 5%;
+        }
+
+        .milk-tea-image {
+            height: 15vh;
+            width: auto;
+            top: 20px;
+            right: 20px;
+        }
+    }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    .join-UJ-section {
+        max-height: 100dvh;
+    }
+
+    .join-us {
+        justify-content: flex-start;
+        padding-top: 75px;
+        gap: 25px;
+
+        h1 {
+            font-size: 3.5vh;
+            margin: 0 32px;
+            text-shadow: 0 0 2px white;
+        }
+
+        p {
+            font-size: 2vh;
+            text-shadow: 0 0 1px white;
+            margin: 0 36px;
+        }
+
+        .join-us-button {
+            font-size: 2vh;
+            width: 160px;
+            height: 40px;
+        }
+
+        ul {
+            font-size: 8px;
+            padding: 0 40px;
+        }
+    }
+
+    .join-right,
+    .join-left {
+        .image-container-dragon,
+        .image-container-swing,
+        .image-container-group,
+        .image-container-tea {
+            display: none;
+        }
+
+        .image-container-pumpkin {
+            top: 70%;
+            left: 7%;
+        }
+
+        .pumpkin-image {
+            height: 16vh;
+            width: auto;
+            top: 20px;
+            left: 20px;
+        }
+
+        .image-container-milk-tea {
+            top: 68%;
+            right: 7%;
+        }
+
+        .milk-tea-image {
+            height: 13vh;
+            width: auto;
+            top: 20px;
+            right: 20px;
+        }
+    }
+}

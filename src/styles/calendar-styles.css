@@ -1,0 +1,82 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: visible;
+}
+
+.calendar-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+    ),
+    url(../../assets/jade-green.jpg) no-repeat center center fixed;
+    height: 32dvh;
+}
+
+.calendar-container {
+    background-color: #e8e5dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.calendar {
+    background-color: #e8e5dc;
+    width: 70vw;
+    height: 100vh;
+    border-radius: 20px;
+    border: solid 10px #2F5249;
+    margin: -80px 0 40px;
+
+    @media (orientation: portrait) {
+        margin-top: 6vh;
+    }
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5vw;
+    font-family: "TS Block Bold", serif;
+    color: white;
+    text-shadow: 0 0 3px white;
+    padding-bottom: 40px;
+    margin: 0 164px;
+}
+
+/* Portrait */
+@media (orientation: portrait) {
+    h1 {
+        font-size: 4vw;
+    }
+
+    .calendar {
+        margin-top: -80px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+        text-shadow: 0 0 1px white;
+        padding: 0 10px;
+        margin: 0 40px;
+    }
+
+    .calendar {
+        width: 84vw;
+        height: 70vh;
+        margin-top: -60px;
+    }
+    .calendar-container {
+        height: auto;
+    }
+}

@@ -1,0 +1,257 @@
+body {
+    height: 100dvh;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero section */
+.hero-section {
+    height: 85%;
+    overflow: hidden;
+    padding: 0 5vw;
+    position: relative;
+    background-image: url(../../assets/leaf-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text {
+    position: relative;
+    color: white;
+}
+
+.hero-text h1 {
+    font-family: "TS Block Bold", serif;
+    font-size: 4rem;
+    text-shadow: 0 0 4px white;
+    margin: 0;
+}
+
+.hero-text h2 {
+    font-family: "Rubik", serif;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    text-shadow: 0 0 2px white;
+    margin: 1.5rem 0;
+}
+
+.hero-text h3 {
+    font-family: "Alegreya Sans SC", serif;
+    font-weight: normal;
+    font-size: 1rem;
+    text-shadow: 0 0 2px white;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.spotify {
+    position: absolute;
+    bottom: -25%;
+    right: 1vw;
+    border-width: 0;
+
+    @media (orientation: portrait) {
+        bottom: -125%;
+        width: 80vw;
+        left: -10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 10vh;
+        padding-bottom: 5vh;
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+
+        h1 {
+            font-size: 10vw;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 2px white;
+        }
+
+        h2 {
+            font-size: 4vw;
+            margin: 0.5rem 0;
+            text-shadow: 0 0 1px white;
+        }
+
+        h3 {
+            font-size: 3vw;
+            text-shadow: 0 0 1px white;
+        }
+    }
+
+    .spotify {
+        height: 15dvh;
+        width: 90vw;
+        position: static;
+        font-size: 3vw;
+        align-self: center;
+    }
+}
+
+/* Footer */
+.description-section {
+    position: absolute;
+    bottom: 0;
+    background-color: #1F7D53;
+    padding: 0 5vw;
+    max-height: 40%;
+    z-index: 10;
+}
+
+.description-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0.5rem 0;
+}
+
+.footer-description {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 200;
+    line-height: 1.6;
+    color: white;
+    max-width: 100%;
+    em {
+        font-style: italic;
+        font-weight: bold;
+    }
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    font-family: 'Public Sans', sans-serif;
+    color: white;
+    padding-left: 50px;
+    padding-bottom: 10px;
+}
+
+.social-links h5 {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.social-links a {
+    font-size: 1rem;
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.social-icons a {
+    font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .description-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .footer-description,
+    .social-links {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .footer-description {
+        font-size: 1rem;
+        padding-top: 5px;
+    }
+
+    .social-links {
+        font-size: 2vw;
+        padding-left: 0;
+        margin-top: 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Splash logo */
+#splash-logo {
+    position: fixed;
+    inset: 0;
+    background-color: #1F7D53;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease;
+    pointer-events: none;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+#splash-logo img {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: white;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(0.9);
+    filter: drop-shadow(0 0 0px white);
+    transition: opacity 1s ease, transform 1s ease, filter 1s ease;
+}
+
+#splash-logo.show img {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0) brightness(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+    animation: slow-zoom 4s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+    #splash-logo img {
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+@keyframes slow-zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
