@@ -182,7 +182,7 @@ html, body {
         border-radius: 5px;
     }
 
-    .image-container-swing {
+    .image-container-cookies {
         position: absolute;
         border: 2px solid white;
         display: inline-block;
@@ -193,7 +193,7 @@ html, body {
         border-radius: 5px;
     }
 
-    .swing-image {
+    .cookies-image {
         height: 200px;
         width: auto;
         position: relative;
@@ -202,7 +202,7 @@ html, body {
         border-radius: 5px;
     }
 
-    .image-container-group {
+    .image-container-newgroup {
         position: absolute;
         border: 2px solid white;
         display: inline-block;
@@ -213,7 +213,7 @@ html, body {
         border-radius: 5px;
     }
 
-    .group-image {
+    .newgroup-image {
         height: 150px;
         width: auto;
         position: relative;
@@ -254,8 +254,8 @@ html, body {
     .join-right,
     .join-left {
         .image-container-dragon,
-        .image-container-swing,
-        .image-container-group {
+        .image-container-cookies,
+        .image-container-newgroup {
             display: none;
         }
 
@@ -271,12 +271,12 @@ html, body {
             left: 20px;
         }
 
-        .image-container-pumpkin {
+        .image-container-picnic {
             top: 77%;
             left: 50%;
         }
 
-        .pumpkin-image {
+        .picnic-image {
             height: 18vh;
             width: auto;
             bottom: 20px;
@@ -335,18 +335,18 @@ html, body {
     .join-right,
     .join-left {
         .image-container-dragon,
-        .image-container-swing,
-        .image-container-group,
+        .image-container-cookies,
+        .image-container-newgroup,
         .image-container-tea {
             display: none;
         }
 
-        .image-container-pumpkin {
+        .image-container-picnic {
             top: 70%;
             left: 7%;
         }
 
-        .pumpkin-image {
+        .picnic-image {
             height: 16vh;
             width: auto;
             top: 20px;
