@@ -134,7 +134,7 @@ html, body {
     }
 
     .picnic-image {
-        height: 150px;
+        height: auto;
         width: auto;
         position: relative;
         right: 30px;
