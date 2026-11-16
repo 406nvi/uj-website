@@ -1,0 +1,14 @@
+.git
+.assetsignore
+.dev.vars
+.dev.vars.example
+.gitignore
+.idea
+.wrangler
+README.md
+LAUNCH.md
+migrations
+node_modules
+worker
+wrangler.jsonc
+*.zip

@@ -1,0 +1,7 @@
+# Copy to .dev.vars for local development (never committed).
+# Sign-in is Google only, so there is nothing to set for it here.
+#
+# Optional: test report emails locally (see worker/apps-script/Code.gs).
+# REPORT_THRESHOLD=1
+# APPS_SCRIPT_URL=
+# APPS_SCRIPT_SECRET=

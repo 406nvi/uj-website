@@ -1,0 +1,36 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "uj-website",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-19",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page",
+    // Static pages are served directly; only API calls run the Worker
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "unjaded-community",
+      "database_id": "dcd2c881-7ac3-494a-8c29-397a0a54fc3c"
+    }
+  ],
+  // Image storage. Add the namespace "id" after creating it with `wrangler kv namespace create`.
+  "kv_namespaces": [
+    {
+      "binding": "IMAGE_KV"
+    }
+  ],
+  // Secrets (set with `wrangler secret put`, never committed): APPS_SCRIPT_URL and APPS_SCRIPT_SECRET.
+  // They enable report emails; see worker/apps-script/Code.gs.
+  "vars": {
+    "GOOGLE_CLIENT_ID": "212740126369-m2qsvmimttchvvndpj36tan4pd0ca1qg.apps.googleusercontent.com",
+    "POSTS_PER_HOUR": "30",
+    "COMMENTS_PER_HOUR": "300",
+    "REPORT_THRESHOLD": "5"
+  }
+}
