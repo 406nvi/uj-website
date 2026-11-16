@@ -3,6 +3,17 @@
 Run commands from this repository with the `unjaded` Wrangler auth profile.
 Do not merge the community branch until the remote prerequisites below are ready.
 
+## Provisioning status
+
+- Production KV namespace created; its ID is recorded in `wrangler.jsonc`.
+- Remote D1 has migrations 0001 and 0002 applied.
+- The 12 approved production admins are present; local test users were not copied.
+- `APPS_SCRIPT_URL` and `APPS_SCRIPT_SECRET` are set on `uj-website`.
+- D1 and KV bindings will attach with the first community code deploy. The old
+  assets-only Worker cannot accept D1 bindings; Cloudflare requires ES module
+  format, which the new `worker/index.js` provides.
+- New community code has not been deployed by this provisioning step.
+
 ## Remote prerequisites
 
 1. Confirm `npx wrangler whoami` selects the unjaded account.

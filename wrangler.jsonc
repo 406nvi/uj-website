@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "uj-website",
+  "account_id": "52821da05a882b880fc9f0d04d06154a",
   "main": "worker/index.js",
   "compatibility_date": "2026-10-19",
   "observability": {
@@ -19,10 +20,11 @@
       "database_id": "dcd2c881-7ac3-494a-8c29-397a0a54fc3c"
     }
   ],
-  // Image storage. Add the namespace "id" after creating it with `wrangler kv namespace create`.
+  // Production image storage (Workers KV).
   "kv_namespaces": [
     {
-      "binding": "IMAGE_KV"
+      "binding": "IMAGE_KV",
+      "id": "e9ddf5cc5d994553be835a7a221a3a71"
     }
   ],
   // Secrets (set with `wrangler secret put`, never committed): APPS_SCRIPT_URL and APPS_SCRIPT_SECRET.
